@@ -76,7 +76,7 @@ classdef (Abstract) ObjFUNbase < handle
             
             % run all tasks
             if obj.dry_run ~= 1
-                run_tasks(obj.objrun, tasks);
+                if( run_tasks(obj.objrun, tasks) ) error('Error while executing simulation tasks'); end;
             end
             
             % Retrieve and combine results from all simulation runs

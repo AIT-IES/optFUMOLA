@@ -14,7 +14,7 @@ classdef (Abstract) RunTASKSbase < handle
     methods (Abstract)
         
         % Actual parallelization of all received tasks. Implement this method in a subclass.
-        run_tasks(objrun, tasks)
+        status = run_tasks(objrun, tasks)
         
     end % methods (Abstract)
     
